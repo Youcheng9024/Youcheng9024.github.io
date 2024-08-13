@@ -3,7 +3,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <title>about | 优晟的小窝</title>
+    <title>关于我 | 优晟的小窝</title>
     <meta name="author" content="优晟" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,13 +42,6 @@
 
 
 
-<script src="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
-
-
-
-
-
 <link rel="stylesheet" href="/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
@@ -57,9 +50,11 @@
         <transition name="fade">
             <div id="loading" v-show="loading">
                 <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="/images/loading.gif" />
+                    <h2>LOADING...</h2>
+                    <img src="/images/loading.gif" 
+                    style="width: 150px;height: 150px;"
+                    
+                     />
                 </div>
             </div>
         </transition>
@@ -82,16 +77,6 @@
         <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
         </a>
         
     </nav>
@@ -130,24 +115,6 @@
                     </div>
                 </a>
                 
-                <a href="/categories">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
-                    </div>
-                </a>
-                
-                <a href="/tags">
-                    <div class="item">
-                        <div style="min-width: 20px; max-width: 50px; width: 10%">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
-                    </div>
-                </a>
-                
             </div>
         </transition>
     </nav>
@@ -159,7 +126,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>about</h1>
+        <h1>关于我</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -173,21 +140,9 @@
     </div>
     
     <div class="content" v-pre>
-        
+        <img src="C:\Users\14217\blog\source\about\1723470839472.png" alt="1723470839472" style="zoom: 25%;" />
+
     </div>
-    
-    
-    
-    <div id="comment">
-        <div id="gitalk-container"></div>
-    </div>
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
-    
-    
     
     
 </div>
@@ -221,42 +176,11 @@
     </div>
     <script src="/js/main.js"></script>
     
-    
-<script
-    src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang=""
-    crossorigin
-    async
-></script>
-
-
-<script>
-    const gitalk = new Gitalk({
-        clientID: "",
-        clientSecret: "",
-        repo: "",
-        owner: "",
-        admin: "".split(","),
-        language: "",
-        id: location.pathname,
-        
-    })
-    gitalk.render("gitalk-container");
-</script>
-
-
-
-
-    
+    <canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+></canvas>
+<script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
 </body>
 </html>

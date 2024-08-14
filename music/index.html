@@ -3,7 +3,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8" />
-    <title>music | 优晟の洞穴</title>
+    <title>我喜欢的一些音乐 | 优晟の洞穴</title>
     <meta name="author" content="优晟" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,6 +42,10 @@
 
 
 
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
 
 
 
@@ -144,7 +148,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>music</h1>
+        <h1>我喜欢的一些音乐</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -166,7 +170,7 @@
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script> 
 
-    <div id="aplayer-NXqbthJW" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-hHcFtGnY" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="7762071290" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="300px" data-preload="auto" data-theme="#555" data-order="random"
     ></div>
 
@@ -175,10 +179,10 @@
     
     
     
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
     
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
     
     
     
@@ -214,24 +218,24 @@
     <script src="/js/main.js"></script>
     
     
-<script
-    src="https://giscus.app/client.js"
-    data-repo=""
-    data-repo-id=""
-    data-category=""
-    data-category-id=""
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang=""
-    crossorigin
-    async
-></script>
 
 
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://waline-oe7ys4st5-youchengs-projects.vercel.app/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        
+    });
+</script>
 
 
 
